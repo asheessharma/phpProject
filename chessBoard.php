@@ -7,12 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-        for($i=1;$i<=8;$i++){
-            for($j=1;$j<=8;$j++){
-                if(($i+$j)%2==0)
-            }
-        }
-    ?>
+<table width="400px" border="1px" cellspacing="0px">
+		<?php
+		echo "Chess Board";
+		$value = 0;
+
+		for($col = 0; $col < 8; $col++) {
+			echo "<tr>";
+			$value = $col;
+
+			for($row = 0; $row < 8; $row++) {
+				if($value%2 == 0) {
+					echo "<td height=40px width=20px bgcolor=black></td>";
+					$value++;
+				}
+				else {
+					echo "<td height=40px width=20px bgcolor=white></td>";
+					$value++;
+				}
+			}
+			echo "</tr>";
+		}
+		?>
+	</table>
 </body>
 </html>
